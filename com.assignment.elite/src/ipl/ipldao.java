@@ -10,5 +10,7 @@ public interface ipldao {
 
 	boolean addPlayer(Ipl player);
 
-	boolean addToTeam(String teamname, Ipl player);
+//	boolean addToTeam(String teamname, Ipl player);
+
+	boolean addToTeam(String teamname, int jersey) throws PlayerNotFoundException;
 }
