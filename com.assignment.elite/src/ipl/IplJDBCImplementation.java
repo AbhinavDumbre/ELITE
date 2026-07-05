@@ -22,8 +22,7 @@ public class IplJDBCImplementation implements ipldao {
 	}
 
 	public boolean addPlayer(Ipl player) {
-		String sql = "insert into ipl values(?,?,?,?,?)";
-		try {
+		String sql = "INSERT INTO ipl (jerseyno, playername, role, teamname, winningamount) VALUES (?,?,?,?,?)";		try {
 			Connection conn = IPLJDBCFactory.getConnection();
 			PreparedStatement pre = conn.prepareStatement(sql);
 			pre.setInt(1, player.getJerseyno());
